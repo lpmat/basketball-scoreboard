@@ -8,30 +8,33 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="container">
-        <div class="team">
-            <h2>HOME</h2>
-            <div class="score">
-                <p>0</p>
+    <main>
+        <div class="score-container">
+            <div class="team">
+                <h2>HOME</h2>
+                <div class="score">
+                    <p id="home-score">0</p>
+                </div>
+                <div>
+                    <button onclick="homeAdd1P()">+ 1</button>
+                    <button onclick="homeAdd2P()">+ 2</button>
+                    <button onclick="homeAdd3P()">+ 3</button>
+                </div>
             </div>
-            <div>
-                <button>+ 1</button>
-                <button>+ 2</button>
-                <button>+ 3</button>
+            <div class="team">
+                <h2>GUEST</h2>
+                <div class="score">
+                    <p id="guest-score">0</p>
+                </div>
+                <div>
+                    <button onclick="guestAdd1P()">+ 1</button>
+                    <button onclick="guestAdd2P()">+ 2</button>
+                    <button onclick="guestAdd3P()">+ 3</button>
+                </div>
             </div>
         </div>
-        <div class="team">
-            <h2>GUEST</h2>
-            <div class="score">
-                <p>0</p>
-            </div>
-            <div>
-                <button>+ 1</button>
-                <button>+ 2</button>
-                <button>+ 3</button>
-            </div>
-        </div>
-    </div>
+        <button onclick="resetP()">NEW GAME</button>
+    </main>
 
     <script src="index.js"></script>
 </body>

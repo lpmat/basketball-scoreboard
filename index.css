@@ -18,16 +18,26 @@
     font-weight: bold;
 }
 
-.container {
+main {
     width: 575px;
     margin: 0 auto;
 
-    padding-block: 70px;
-
-    display: flex;
-    justify-content: space-around;
+    padding: 70px 0;
 
     background: #1B244A;
+
+    > button {
+        display: block;
+        width: fit-content;
+        aspect-ratio: 2/1;
+        padding-inline: 6px;
+        margin: 0 auto;
+    }
+}
+
+.score-container {
+    display: flex;
+    justify-content: space-around;
 }
 
 .team {
@@ -55,7 +65,7 @@
     border-radius: 5px;
     
     > p {
-        font-family: "Technology";
+        font-family: "Technology", 'Courier New', Courier, monospace;
         font-weight: bold;
         font-size: 90px;
         color: #F94F6D;
@@ -64,7 +74,7 @@
 }
 
 button {
-    font-family: "Technology";
+    font-family: "Technology", 'Courier New', Courier, monospace;
     font-weight: bold;
     font-size: 18px;
     color: #9AABD8;
@@ -75,4 +85,10 @@ button {
     border: 2px solid #9AABD8;
     border-radius: 5px;
     background: none;
+
+    margin-block-end: 12px;
+}
+
+.highlight {
+    color: #FBBF24 !important;
 }

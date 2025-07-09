@@ -1,5 +1,78 @@
 *, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Technology;
+    src: url(technology.ttf);
+}
+
+@font-face {
+    font-family: Technology;
+    src: url(technology_bold.ttf);
+    font-weight: bold;
+}
+
+.container {
+    width: 575px;
+    margin: 0 auto;
+
+    padding-block: 70px;
+
+    display: flex;
+    justify-content: space-around;
+
+    background: #1B244A;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    > h2 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 40px;
+        color: #EEEEEE;
+    }
+}
+
+.score {
+    width: 155px;
+    height: 120px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #080001;
+    border-radius: 5px;
+    
+    > p {
+        font-family: "Technology";
+        font-weight: bold;
+        font-size: 90px;
+        color: #F94F6D;
+        line-height: 0;
+    }
+}
+
+button {
+    font-family: "Technology";
+    font-weight: bold;
+    font-size: 18px;
+    color: #9AABD8;
+
+    width: 45px;
+    aspect-ratio: 1/1;
+
+    border: 2px solid #9AABD8;
+    border-radius: 5px;
+    background: none;
 }

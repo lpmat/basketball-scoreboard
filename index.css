@@ -46,15 +46,22 @@ main {
     align-items: center;
     gap: 20px;
 
-    > h2 {
+    > h2, h3 {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 40px;
         color: #EEEEEE;
+    }
+
+    > h2 {
+        font-size: 40px;
+    }
+
+    > h3 {
+        font-size: 20px;
     }
 }
 
 .score {
-    width: 155px;
+    width: 180px;
     height: 120px;
 
     display: flex;
@@ -69,6 +76,26 @@ main {
         font-weight: bold;
         font-size: 90px;
         color: #F94F6D;
+        line-height: 0;
+    }
+}
+
+.fouls {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #080001;
+    border-radius: 5px;
+    
+    > p {
+        font-family: "Technology", 'Courier New', Courier, monospace;
+        font-weight: bold;
+        font-size: 45px;
+        color: #34D399;
         line-height: 0;
     }
 }

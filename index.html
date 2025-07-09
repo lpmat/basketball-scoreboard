@@ -16,10 +16,16 @@
                     <p id="home-score">0</p>
                 </div>
                 <div>
-                    <button onclick="homeAdd1P()">+ 1</button>
-                    <button onclick="homeAdd2P()">+ 2</button>
-                    <button onclick="homeAdd3P()">+ 3</button>
+                    <button onclick="homeAddPoints(1)">+ 1</button>
+                    <button onclick="homeAddPoints(2)">+ 2</button>
+                    <button onclick="homeAddPoints(3)">+ 3</button>
                 </div>
+
+                <h3>FOULS</h3>
+                <div class="fouls">
+                    <p id="home-fouls">0</p>
+                </div>
+                <button onclick="homeFoul()">FOUL</button>
             </div>
             <div class="team">
                 <h2>GUEST</h2>
@@ -27,13 +33,19 @@
                     <p id="guest-score">0</p>
                 </div>
                 <div>
-                    <button onclick="guestAdd1P()">+ 1</button>
-                    <button onclick="guestAdd2P()">+ 2</button>
-                    <button onclick="guestAdd3P()">+ 3</button>
+                    <button onclick="guestAddPoints(1)">+ 1</button>
+                    <button onclick="guestAddPoints(2)">+ 2</button>
+                    <button onclick="guestAddPoints(3)">+ 3</button>
                 </div>
+
+                <h3>FOULS</h3>
+                <div class="fouls">
+                    <p id="guest-fouls">0</p>
+                </div>
+                <button onclick="guestFoul()">FOUL</button>
             </div>
         </div>
-        <button onclick="resetP()">NEW GAME</button>
+        <button onclick="reset()">NEW GAME</button>
     </main>
 
     <script src="index.js"></script>

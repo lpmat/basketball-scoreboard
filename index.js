@@ -4,48 +4,28 @@ let guestDisplay = document.getElementById("guest-score")
 let homeScore = 0
 let guestScore = 0
 
-function homeAdd1P() {
-    homeScore += 1
+function homeAddPoints(value) {
+    homeScore += value
     homeDisplay.textContent = homeScore
     highlightLeader()
 }
 
-function homeAdd2P() {
-    homeScore += 2
-    homeDisplay.textContent = homeScore
-    highlightLeader()
-}
-
-function homeAdd3P() {
-    homeScore += 3
-    homeDisplay.textContent = homeScore
-    highlightLeader()
-}
-
-function guestAdd1P() {
-    guestScore += 1
+function guestAddPoints(value) {
+    guestScore += value
     guestDisplay.textContent = guestScore
     highlightLeader()
 }
 
-function guestAdd2P() {
-    guestScore += 2
-    guestDisplay.textContent = guestScore
-    highlightLeader()
-}
-
-function guestAdd3P() {
-    guestScore += 3
-    guestDisplay.textContent = guestScore
-    highlightLeader()
-}
-
-function resetP() {
+function reset() {
     homeScore = 0
     guestScore = 0
     homeDisplay.textContent = homeScore
     guestDisplay.textContent = guestScore
     highlightLeader()
+    homeFouls = 0
+    guestFouls = 0
+    homeFoulsDisplay.textContent = homeFouls
+    guestFoulsDisplay.textContent = guestFouls
 }
 
 function highlightLeader() {
@@ -59,4 +39,20 @@ function highlightLeader() {
         homeDisplay.classList.remove("highlight")
         guestDisplay.classList.remove("highlight")
     }    
+}
+
+let homeFoulsDisplay = document.getElementById("home-fouls")
+let guestFoulsDisplay = document.getElementById("guest-fouls")
+
+let homeFouls = 0
+let guestFouls = 0
+
+function homeFoul() {
+    homeFouls += 1
+    homeFoulsDisplay.textContent = homeFouls
+}
+
+function guestFoul() {
+    guestFouls += 1
+    guestFoulsDisplay.textContent = guestFouls
 }

@@ -16,18 +16,6 @@ function guestAddPoints(value) {
     highlightLeader()
 }
 
-function reset() {
-    homeScore = 0
-    guestScore = 0
-    homeDisplay.textContent = homeScore
-    guestDisplay.textContent = guestScore
-    highlightLeader()
-    homeFouls = 0
-    guestFouls = 0
-    homeFoulsDisplay.textContent = homeFouls
-    guestFoulsDisplay.textContent = guestFouls
-}
-
 function highlightLeader() {
     if (homeScore > guestScore) {
         homeDisplay.classList.add("highlight")
@@ -54,5 +42,17 @@ function homeFoul() {
 
 function guestFoul() {
     guestFouls += 1
+    guestFoulsDisplay.textContent = guestFouls
+}
+
+function reset() {
+    homeScore = 0
+    guestScore = 0
+    homeDisplay.textContent = homeScore
+    guestDisplay.textContent = guestScore
+    highlightLeader()
+    homeFouls = 0
+    guestFouls = 0
+    homeFoulsDisplay.textContent = homeFouls
     guestFoulsDisplay.textContent = guestFouls
 }

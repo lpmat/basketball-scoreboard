@@ -28,6 +28,41 @@
     color: #FBBF24 !important;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Components */
+
+h1,
+h2,
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #EEEEEE;
+}
+
+button {
+    font-family: "Technology", "Courier New", Courier, monospace;
+    font-weight: bold;
+    font-size: 18px;
+    color: #9AABD8;
+
+    width: 45px;
+    aspect-ratio: 1/1;
+
+    border: 2px solid #9AABD8;
+    border-radius: 5px;
+    background: none;
+}
+
 /* Components & Layout */
 
 main {
@@ -42,14 +77,11 @@ main {
         display: flex;
         justify-content: space-around;
     }
-    
-    > button {
-        display: block;
-        width: fit-content;
-        aspect-ratio: 2/1;
-        padding-inline: 6px;
-        margin: 0 auto;
-    }
+}
+
+.scoreboard > header {
+    width: fit-content;
+    margin: 0 auto 2rem auto;
 }
 
 .team {
@@ -58,9 +90,7 @@ main {
     gap: 2rem;
 
     h2 {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 40px;
-        color: #EEEEEE;
     }
 }
 
@@ -71,7 +101,7 @@ main {
     gap: 20px;
 }
 
-.score {
+.score-display {
     width: 180px;
     height: 120px;
 
@@ -82,7 +112,7 @@ main {
     background: #080001;
     border-radius: 5px;
     
-    > p {
+    > output {
         font-family: "Technology", "Courier New", Courier, monospace;
         font-weight: bold;
         font-size: 90px;
@@ -113,7 +143,7 @@ main {
     background: #080001;
     border-radius: 5px;
     
-    > p {
+    > output {
         font-family: "Technology", "Courier New", Courier, monospace;
         font-weight: bold;
         font-size: 45px;
@@ -122,16 +152,10 @@ main {
     }
 }
 
-button {
-    font-family: "Technology", "Courier New", Courier, monospace;
-    font-weight: bold;
-    font-size: 18px;
-    color: #9AABD8;
-
-    width: 45px;
-    aspect-ratio: 1/1;
-
-    border: 2px solid #9AABD8;
-    border-radius: 5px;
-    background: none;
+.game-controls > button {
+    display: block;
+    width: fit-content;
+    aspect-ratio: 2/1;
+    padding-inline: 6px;
+    margin: 0 auto;
 }

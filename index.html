@@ -3,52 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="#" type="image/x-icon">
     <title>Basketball Scoreboard</title>
 
     <link rel="stylesheet" href="index.css">
+
+    <script src="index.js" defer></script>
 </head>
 <body>
     <main>
-        <div class="score-container">
-            <div class="team">
-                <h2>HOME</h2>
-                <div class="score">
-                    <p id="home-score">0</p>
-                </div>
-                <div>
-                    <button onclick="homeAddPoints(1)">+ 1</button>
-                    <button onclick="homeAddPoints(2)">+ 2</button>
-                    <button onclick="homeAddPoints(3)">+ 3</button>
+
+        <div>
+            
+            <!-- Home -->
+            <div class="team" id="home">
+
+                <!-- Score -->
+                <div class="score-container">
+                    <h2>HOME</h2>
+                    <div class="score">
+                        <p id="home-score">0</p>
+                    </div>
+                    <div>
+                        <button onclick="homeAddPoints(1)">+ 1</button>
+                        <button onclick="homeAddPoints(2)">+ 2</button>
+                        <button onclick="homeAddPoints(3)">+ 3</button>
+                    </div>
                 </div>
 
-                <h3>FOULS</h3>
-                <div class="fouls">
-                    <p id="home-fouls">0</p>
-                </div>
-                <button onclick="homeFoul()">FOUL</button>
-            </div>
-            <div class="team">
-                <h2>GUEST</h2>
-                <div class="score">
-                    <p id="guest-score">0</p>
-                </div>
-                <div>
-                    <button onclick="guestAddPoints(1)">+ 1</button>
-                    <button onclick="guestAddPoints(2)">+ 2</button>
-                    <button onclick="guestAddPoints(3)">+ 3</button>
+                <!-- Fouls -->
+                <div class="fouls-container">
+                    <h2>FOULS</h2>
+                    <div class="fouls">
+                        <p id="home-fouls">0</p>
+                    </div>
+                    <button onclick="homeFoul()">FOUL</button>
                 </div>
 
-                <h3>FOULS</h3>
-                <div class="fouls">
-                    <p id="guest-fouls">0</p>
-                </div>
-                <button onclick="guestFoul()">FOUL</button>
             </div>
+
+            <!-- Guest -->
+            <div class="team" id="guest">
+
+                <!-- Score -->
+                <div class="score-container">
+                    <h2>GUEST</h2>
+                    <div class="score">
+                        <p id="guest-score">0</p>
+                    </div>
+                    <div>
+                        <button onclick="guestAddPoints(1)">+ 1</button>
+                        <button onclick="guestAddPoints(2)">+ 2</button>
+                        <button onclick="guestAddPoints(3)">+ 3</button>
+                    </div>
+                </div>
+
+                <!-- Fouls -->
+                <div class="fouls-container">
+                    <h2>FOULS</h2>
+                    <div class="fouls">
+                        <p id="guest-fouls">0</p>
+                    </div>
+                    <button onclick="guestFoul()">FOUL</button>
+                </div>
+
+            </div>
+
         </div>
         
         <button onclick="reset()">NEW GAME</button>
     </main>
-
-    <script src="index.js"></script>
 </body>
 </html>

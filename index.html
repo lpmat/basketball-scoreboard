@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <!-- Icon created by GOWI - Flaticon -->
     <title>Basketball Scoreboard</title>
 
     <link rel="stylesheet" href="index.css">
@@ -18,28 +19,27 @@
             <h1>Basketball Scoreboard</h1>
         </header>
 
-        <div class="teams-container" role="group" aria-label="Team scores">
+        <div class="teams-container" role="group" aria-label="Scores">
             
             <!-- Home -->
             <section class="team" id="home" aria-labelledby="home-name">
 
-                <header class="team-name">
-                    <h2 id="home-name">HOME</h2>
+                <header>
+                    <h2 class="team-name" id="home-name">HOME</h2>
                 </header>
 
                 <!-- Score -->
-                <section class="score-container" aria-labelledby="home-score-title">
-                    <h3 class="sr-only" id="home-score-title">Home team score</h3>
+                <section class="score-container" aria-label="Home team score">
 
                     <!-- Score display -->
                     <div class="score-display" role="status" aria-live="polite"
                     aria-label="Current home team score">
-                        <output id="home-score" aria-live="polite"
-                        for="home-controls" aria-label="Points">0</output>
+                        <output id="home-score" class="score-value"
+                        for="home-score-controls" aria-label="Points">0</output>
                     </div>
 
                     <!-- Score controls -->
-                    <div class="score-controls" id="home-controls"
+                    <div class="score-controls" id="home-score-controls"
                         role="group" aria-label="Home team score controls">
                         <button
                             type="button"
@@ -57,13 +57,22 @@
                 </section>
 
                 <!-- Fouls -->
-                <section class="fouls-container">
-                    <h3 class="fouls-title" id="home-fouls-title">FOULS</h3>
+                <section class="fouls-container" aria-label="Home team fouls">
+                    <h3 class="fouls-title">FOULS</h3>
                     
-                    <div class="fouls" aria-label="Home team fouls">
-                        <output id="home-fouls">0</output>
+                    <!-- Fouls display -->
+
+                    <div class="fouls-display" role="status" aria-live="polite"
+                    aria-label="Current home team fouls">
+                        <output id="home-fouls" class="fouls-value"
+                        for="home-foul-btn" aria-label="Fouls">0</output>
                     </div>
-                    <button onclick="homeFoul()">FOUL</button>
+
+                    <button
+                        type="button"
+                        id="home-foul-btn"
+                        onclick="homeFoul()"
+                        aria-label="Add a foul to the home team">FOUL</button>
                 </section>
 
             </section>
@@ -71,23 +80,22 @@
             <!-- Guest -->
             <section class="team" id="guest" aria-labelledby="guest-name">
 
-                <header class="team-name">
-                    <h2 id="guest-name">GUEST</h2>
+                <header>
+                    <h2 class="team-name" id="guest-name">GUEST</h2>
                 </header>
 
                 <!-- Score -->
-                <section class="score-container" aria-labelledby="guest-score-title">
-                    <h3 class="sr-only" id="guest-score-title">Guest team score</h3>
+                <section class="score-container" aria-label="Guest team score">
 
                     <!-- Score display -->
                     <div class="score-display" role="status" aria-live="polite"
                     aria-label="Current guest team score">
-                        <output id="guest-score" aria-live="polite"
-                        for="guest-controls" aria-label="Points">0</output>
+                        <output id="guest-score" class="score-value"
+                        for="guest-score-controls" aria-label="Points">0</output>
                     </div>
 
                     <!-- Score controls -->
-                    <div class="score-controls" id="guest-controls"
+                    <div class="score-controls" id="guest-score-controls"
                         role="group" aria-label="Guest team score controls">
                         <button
                             type="button"
@@ -105,14 +113,22 @@
                 </section>
 
                 <!-- Fouls -->
-                <section class="fouls-container">
+                <section class="fouls-container" aria-label="Guest team fouls">
+                    <h3 class="fouls-title">FOULS</h3>
                     
-                    <h3 class="fouls-title" id="home-fouls-title">FOULS</h3>
+                    <!-- Fouls display -->
 
-                    <div class="fouls" aria-label="Guest team fouls">
-                        <output id="guest-fouls">0</output>
+                    <div class="fouls-display" role="status" aria-live="polite"
+                    aria-label="Current guest team fouls">
+                        <output id="guest-fouls" class="fouls-value"
+                        for="guest-foul-btn" aria-label="Fouls">0</output>
                     </div>
-                    <button onclick="guestFoul()">FOUL</button>
+
+                    <button
+                        type="button"
+                        id="guest-foul-btn"
+                        onclick="guestFoul()"
+                        aria-label="Add a foul to the guest team">FOUL</button>
                 </section>
 
             </section>
@@ -122,7 +138,7 @@
         <footer class="game-controls">
             <button
                 type="button"
-                aria-label="Commencer un nouveau match"
+                aria-label="Start a new game"
                 onclick="reset()">NEW GAME</button>
         </footer>
     </main>
